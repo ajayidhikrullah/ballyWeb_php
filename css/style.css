@@ -1,0 +1,714 @@
+/* ++++++++++++++++++++
+clearing d default styles
++++++++++++++++++++++++*/
+body{
+  margin: 0;
+  padding: 0;
+}
+/*full container*/
+/* @media (min-width: 960px){
+.container{
+  width: auto;
+  margin: auto;
+  padding: 10px;
+  }
+} */
+/* +++++++++++++++++++++++++++++++++++++++++++
+cleareing the harsh container default style
+for the logo and logoname
++++++++++++++++++++++++++++++++++++++++++++++*/
+/* .header-container {
+  padding: 0;
+  margin: 0;
+} */
+/*++++++++++++++++++++++++++++++++++++
+the harsh container for the logo and logoname
+setting the media query for minwidth (231px)
++++++++++++++++++++++++__________________*/
+ /* @media (max-width: 231px){
+  .header-container{
+    width: auto;
+    margin: 10px;
+    margin-bottom: 0;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: darkgrey;
+    border-radius: 10px;
+  }
+} */
+/* 
+@media (min-width: 320px){
+  .header-container{
+    width: auto;
+    margin: 10px;
+    margin-bottom: 0;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: darkgrey;
+    border-radius: 10px;
+  }
+} */
+
+/* ________________NEW HEADER STYLE JUST ADDE___________ */
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+
+header{
+	padding: 10px;
+	/*margin:10px;*/
+	background-color:#000;
+	width: 100%;
+	position: fixed;
+	overflow: hidden;
+	top: 0;
+}
+
+.main-header{
+	background-color: grey;
+	max-width:50px;
+	margin: 10px;
+	padding: 10px;
+	/*display: inline-block;*/
+	float: left;
+}
+
+/*.clear{
+	clear: both;
+}
+*/
+.main-nav{
+	/*background-color: brown;*/
+	/*display: inline;*/
+	float: right;
+	margin-right: 150px;
+	padding: 10px;
+}
+
+.main-nav .searchbar{
+	float: right;
+	margin-left:10px;
+  /*padding: 5px;*/
+  background-color: white;  
+}
+
+.main-nav ul li{
+  display: inline;
+  background-color:#fff;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  
+}
+
+@media(max-width: 400px){
+	.main-nav ul li {
+		float: left;
+	}
+	.main-header {
+		float: left;
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* __________________________________________
+    END OF THE NEW FIXED HEADER
+ ___________________________________________ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*___________________________________
+  logoname name styles
+  _____________________________________
+*/
+
+/* span.logo-name{
+  font-style: normal;
+  color: rgb(179, 136, 28);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lobster', cursive, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 10px;
+} */
+
+/*--------------------
+ [to Hover on the logoname]
+  ----------------------*/
+/* span.logo-name:hover{
+  color: darkorange;
+  border: 1px solid;
+ } */
+
+ /* a {                      
+text-decoration: none; }---this was done to clear d default 'underline'--- */
+
+/*|getting started withthe NavBar|*/
+/* ul.main-nav-menu {
+  padding: 0;
+  margin: 0;
+} */
+
+/*setup d nav backgroundcolor/padding/margin
+to rythme with d greycolor*/
+/* nav{
+  background-color: chocolate;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  /* border: 2px solid coral; border-radius: 3px; 
+} */
+
+/*setup d links to b inline asin intoto*/
+/* ul.main-nav-menu li {
+  display: inline;
+} */
+
+/*[to give d links its own
+separate color gangan] - also
+added media query to d nav to b block
+level at some point
+*/
+/* ul.main-nav-menu li a {
+  background-color: honeydew;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 5px;
+  color: coral;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  text-align: center;
+}
+
+
+.main-nav-menu li a:hover {
+  background-color: aqua;
+  font-weight: bold;
+
+} */
+
+/*- also
+added media query to d nav to b block
+level at some point
+*/
+/* @media (max-width: 240px){
+  ul.main-nav-menu li a {
+    display: block;
+    background-color: honeydew;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: coral;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-align: center;
+  }
+} */
+
+/*section aspect 
+uplod bg img, min-height so d picx and d 
+text can b surrounded together*/
+
+.banner-sect {
+  background: url('../img/balqeesimg/bgimg.jpg') no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  width: 90vw;
+  margin: -40px auto 40px;
+}
+/*the h1 tag element
+set to d middle*/
+.banner-head{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  padding: 200px 0 0px;
+  font-size: 3.125em;
+  color: chocolate;
+  text-shadow: 10px 20px 10px rgb(124, 103, 56);
+  margin-top: 130px;
+}
+
+.banner-head-name{
+  color: royalblue;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  line-height: 5px;
+}
+
+/*p tag element set to d center
+through d class*/
+.banner-address{
+  font-family: monospace;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+  font-size: 1.875em;
+}
+
+/*second SECTION is here */
+.images-container{
+  border-radius: 10px;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 2px solid black; */
+  box-shadow: 10px 10px 10px grey;
+  background-color: antiquewhite;
+  width: 80%;
+}
+
+/*here we make d container d
+parent taking in two oda colum*/
+.images-container{
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 2px solid black; */
+  box-shadow: 10px 10px 10px grey;
+  background-color: antiquewhite;
+  width: 90%;
+}
+/*merge d 2 colum togeda
+to take in images syd by syd*/
+.img-title1{
+  border-radius: 10px;
+  width: 40%;
+  float: left;
+  margin: 0px 2px 5px 5%;
+  box-shadow: 10px 5px 10px 5px;
+  padding: 0 5px;
+}
+
+/*first imade on d colum
+*/
+div .img-container1 {
+  margin: 0 auto;
+  padding: 0 0;
+  background-size: cover;
+}
+/*reshaped d whole image
+and this has access to*/
+.img-container1 img{
+  background-size: cover;
+  width: 100%;
+  border-radius: 14px;
+}
+/*for the second image
+in d colum*/
+div .img-container2 {
+  margin: 0 auto;
+  padding: 0 0;
+  background-size: cover;
+}
+
+.img-container2 img{
+  background-size: cover;
+  width: 100%;
+  border-radius: 14px;
+}
+
+h4, h1{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  font-size: 1.2em;
+  color: chocolate;
+  text-decoration: blanchedalmond;
+  padding: 5px;
+  margin: 5px;
+}
+
+.colum-content-container{
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.testingg{
+  font-size: 16px;
+}
+.testinggg{
+  font-size: 100%;
+}
+
+/*the 2 column b4 d footer
+to b responsive*/
+/* @media (min-width: 320px){
+  .article-content{
+    margin: 
+  }
+} */
+
+/*the 2 column before d footer*/
+.article-content{
+  margin: 20px auto;
+  border: 1px solid brown; border-radius: 10px;
+  max-width: 40%;
+  float: left;
+  padding: 10px;
+  background-color: burlywood;
+  text-align: justify;
+  font-family: cursive ,fantasy;
+  box-shadow: 5px 10px 5px black;
+  line-height: 25px;
+}
+
+.article-content-aside{
+  border: 1px solid brown; border-radius: 10px;
+  margin: 20px auto;
+  max-width: 40%;
+  float: right;
+  padding: 10px;
+  background-color: burlywood;
+  text-align: justify;
+  font-family: cursive ,fantasy;
+  box-shadow: 5px 10px 5px black;
+  line-height: 25px;
+}
+
+.offer{
+  margin: 30px auto 10px auto;
+  font-family: 'railway' 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3em;
+}
+
+.btn-info{
+  text-decoration: none;
+  font: 100;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  color: chocolate;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.3em;
+  background-color: blue;
+  border-radius: 5px;
+}
+
+/*FOOTER section*/
+.main-footer{
+  margin-left:0 auto;
+  padding: 20px;
+  background-color: darkgrey;
+  /* text-align: justify; */
+}
+
+/*footer services/ support*/
+  .footer1{
+    max-width: 40px;
+    /* margin: 20px auto; */
+  margin: 20px 20px 20px 40px;
+  float: left;
+  padding: 5px;
+}
+
+.foosup{
+   float: left;
+   margin: 20px 20px 20px 40px;
+   /* margin: 20px auto; */
+   padding: 5px;
+}
+
+.foolife{
+  padding: 5px;
+  /* margin: 20px auto; */
+  margin: 20px;
+  float: left;
+}
+
+/* footer content services and so onshinking */
+.footercontent{
+  max-width: 50px;
+  margin: 20px auto;
+}
+
+
+
+h5, p{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.1em;
+  text-align: justify;
+}
+
+/*newsletter page*/
+.fooform{
+  /* text-align: justify; */
+  margin: 5px;
+  padding: 5px;
+  float: left;
+}
+
+ .fooform + h4, p {
+   text-align: justify;
+   margin-top: -5px;
+ }
+
+form{
+  /*  */
+  margin: 10px;
+  /* outline of d form */
+  padding: 0.5em;
+  border-radius: 5px;
+  }
+
+  label{
+    /* making sure the labels are all in d same size */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+    margin: 5px;
+  }
+
+  input{
+    font: 3em sans-serif;
+    width: 250px;
+    box-sizing: border-box;
+    height: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: auto;
+    font-size: 1em;
+  }
+
+  input:focus{
+    border-color: #000;
+  }
+
+  form div + div{
+    margin-top: 0.5em;
+  }
+/* SIGNUP BUTTON */
+  .btn-signup{
+    margin: 10px 10px 0 150px;
+    border-radius: 5px;
+    padding: 10px;
+    color: aliceblue;
+    background-color: rgb(190, 76, 34); 
+    text-align: center;
+  }
+/* hovering o the button */
+  .btn-signup:hover{
+    background-color: burlywood;
+    transition-duration: 0.5s;
+  }
+
+
+  /* this is the address bar design */
+  .fooadd{
+    text-align: center;
+    margin-top: 10px;
+    background-color: grey;
+    height: 150px;
+    max-width: auto;
+    border-radius: 5px;
+    padding: 20px;
+  
+  }
+ .fooadd + address, p {
+  color: beige;
+  text-align: justify;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+  padding: 5px;
+  margin-top: 10px; 
+
+}
+  /*  */
+
+address {
+  color:gainsboro;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 50px;
+  /* line-height: 20px; */
+}
+
+
+/* styling the address text */
+.p{
+  text-align: center;
+
+}
+
+/* hover on the icons */
+.fa {
+  color: rgb(189, 94, 17);
+  font-size: 20px;
+
+}
+
+a{
+  color: rgb(189, 94, 17);;
+}
+
+.fa:hover {
+ font-weight: bolder;
+}
+
+/* SOCIAL MEDIA LINK */
+.sm{
+  background-color: rgb(216, 184, 161);
+  /* margin-left: 10px; */
+  float: left;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 2px;
+  width: 20px;
+}
+
+/* SOCIAL MEDIA RESPONSIVENESS */
+@media(min-width:300px){
+  
+}
+
+
+
+
+/* social media hovering */
+.sm .fa-facebook:hover{
+  color: cornflowerblue;
+  transition-duration: 1s;
+}
+
+.sm .fa-twitter:hover{
+  color: deepskyblue;
+  transition-duration: 1s;
+}
+
+.sm .fa-instagram:hover{
+  color: rgba(240, 20, 229, 0.459);
+  transition-duration: 1s;
+}
+
+
+
+
+
+/* SIGNUP FORM PAGE */
+/* this will resizze from 588px */
+@media (max-width: 500px){
+  /* get the input field and adjust it to b responsive */
+  .inp_fid{
+    width: 100%;
+    font-size: 1em;
+    /* height: 30px; */
+    /* float: left; */
+  }
+
+  input[type= submit]{
+    width: 100%;
+  }
+  .signup-page{
+    width: 699px;
+  }
+}
+
+
+.signup-page{
+  background-color: #79541952;
+  color:coral;
+  margin: 0 auto;
+  box-shadow: 5px 5px 5px black;
+  width: 70%; 
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top:10%;
+}
+
+#form-content{
+  margin-left: 10%;
+}
+
+/* targeting the submut button on signup page n laptop responsiveness */
+input[type=submit]{
+  background-color: rgb(224, 172, 103);
+  color: #fff;
+  font-size: 1em;
+  margin: 10px 0 0 10px;
+  /* width: 50%; */
+  position: relative;
+  left:40%;
+}
+.inp_fid[type=submit]{
+  width: 50%;
+}
+
+/* SOCIAL MEDIA LINK */
+.sm {
+  background-color: rgb(216, 184, 161);
+  /* margin-left: 10px; */
+  float: left;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 2px;
+  width: 20px;
+}
+
+/* Signup page social media hovering */
+
+.sm .fa-facebook:hover{
+  color: cornflowerblue;
+  transition-duration: 1s;
+}
+
+.sm .fa-twitter:hover{
+  color: deepskyblue;
+  transition-duration: 1s;
+}
+
+.sm .fa-instagram:hover{
+  color: rgba(240, 20, 229, 0.459);
+  transition-duration: 1s;
+}
+
+
+
+
+/* /////////////////////////////////////////// */
+/* welcome.php
+ */
+.gmail{
+  margin: 10% 10% 0 10%;
+  border: 5px solid black;
+  background-color: rgb(192, 148, 52);
+  color: #fff;
+}
