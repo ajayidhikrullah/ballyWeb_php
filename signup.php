@@ -44,6 +44,7 @@
         //===================
         else{
             //========harsh the password
+            // actually, One password should harshed
             $hashPwd1 = password_hash($pwd, PASSWORD_DEFAULT);
             $hashPwd2 = password_hash($re_pwd, PASSWORD_DEFAULT);
 
