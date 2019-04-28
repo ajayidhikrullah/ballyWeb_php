@@ -5,30 +5,21 @@ if(isset($_POST['submit'])){
 	$email = mysqli_real_escape_string($conn, $_POST['email']);
 	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
 	//lets query the values
-	$compare_signup = "SELECT * FROM signups WHERE email = '$email' AND pwd = 'pwd'";
+	$compare_signup = "SELECT * FROM signups WHERE email = '$email' AND pwd = '$pwd'";
 	//connect the query
-    // $result = $conn->query($compare_signup);
-    $result = mysqli_query($conn, $compare_signup);
+    $result = $conn->query($compare_signup);
+    // $result = mysqli_query($conn, $compare_signup);
     //check the query
-    $resultCheck = mysqli_num_rows($result);
+    // $resultCheck = mysqli_num_rows($result);
 	//lets check if they are not the same thing
-	if($resultCheck > 1){
+	if(!$resultCheck = $result->fetch_assoc()){
 		echo '<p class="gmail">Email and password dont exist</p>';
-	} elseif($resultCheck < 1){
-		echo '<p class="gmail">You are loggedin</p>' . header('Location: index.php');
+    } /*else($resultCheck < 1){*/
+        else{
+		echo "<p class='gmail'> Welcome You are loggedin as $email </p>";
         // header('Location: index.php');
 	}
 };
-
-
-
-
-
-
-
-
-
-
 ?>
 
 
