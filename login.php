@@ -3,27 +3,50 @@ require('db.php');
 if(isset($_POST['submit'])){
 	//lets get d values
 	$email = mysqli_real_escape_string($conn, $_POST['email']);
-	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
+    $pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
+    
+    //check for hasrhed password
+   /*
+    $sqlPwd = "SELECT * FROM signups WHERE pwd = '$pwd'";
+    $SqlConn = mysqli_query($conn, $SqlConn);
+    $row = mysqli_fetch_assoc($SqlConn);
+    $UnHarshPwd = password_verify($pwd, $SqlConn);
+*/
 	//lets query the values
-	$compare_signup = "SELECT * FROM signups WHERE email = '$email' AND pwd = '$pwd'";
+	$compare_signup = "SELECT * FROM signups WHERE email = '$email'"/* AND pwd = '$pwd'"*/;
 	//connect the query
-    $result = $conn->query($compare_signup);
-    // $result = mysqli_query($conn, $compare_signup);
-    //check the query
-    // $resultCheck = mysqli_num_rows($result);
-	//lets check if they are not the same thing
-	if(!$resultCheck = $result->fetch_assoc()){
-		echo '<p class="gmail">Email and password dont exist</p>';
-    } /*else($resultCheck < 1){*/
+    // $result = $conn->query($compare_signup);
+    $result = mysqli_query($conn, $compare_signup);
+    //check the query - and retuen hw many kind of row founded in d db
+    $resultCheck = mysqli_num_rows($result);
+
+    //lets first take users password and save it
+    $row = mysqli_fetch_assoc($result);
+    $UnharshPwd = password_verify($pwd, $row['pwd']);
+    
+    //lets check if d value of d user that is coming is less dan 1
+    if ($resultCheck < 1 || $UnharshPwd != 1){
+        //dehasrhing d password
+        // $UnharshPwd = password_verify($pwd, $row['pwd']);
+        echo '<p class="gmail">Email and password dont exist</p>';
+    }
+    /*if($UnharshPwd == false){
+        echo '<p class="gmail">Email and password dont exist</p>';
+    }*/ else /*($UnharshPwd == true)*/{
+            // log d user in
+		echo "<p class='gmail'> Welcome You are loggedin as $email </p>";
+        }
+	/*if(!$resultCheck = $result->fetch_assoc()){
+        // $UnHarshPwd = password_verify($pwd, $resultCheck['pwd']);
+        echo '<p class="gmail">Email and password dont exist</p>';
+    //  else($resultCheck < 1){
+    }
         else{
 		echo "<p class='gmail'> Welcome You are loggedin as $email </p>";
         // header('Location: index.php');
-	}
+        }*/
 };
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
