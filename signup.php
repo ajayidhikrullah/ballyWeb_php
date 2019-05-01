@@ -217,7 +217,7 @@
 
                     <div></div>
 
-                    JAVASCRIPT ADDED
+                    JAVASCRIPT ADDED 
 
                     <button type="submit" class="btn-signup">Click here to Sign-Up</button>
                 </form>            

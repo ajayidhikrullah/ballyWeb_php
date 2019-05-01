@@ -12,6 +12,7 @@ if(isset($_POST['submit'])){
     $row = mysqli_fetch_assoc($SqlConn);
     $UnHarshPwd = password_verify($pwd, $SqlConn);
 */
+// yet to be resolved
 	//lets query the values
 	$compare_signup = "SELECT * FROM signups WHERE email = '$email'"/* AND pwd = '$pwd'"*/;
 	//connect the query
@@ -21,8 +22,8 @@ if(isset($_POST['submit'])){
     $resultCheck = mysqli_num_rows($result);
 
     //lets first take users password and save it
-    $row = mysqli_fetch_assoc($result);
-    $UnharshPwd = password_verify($pwd, $row['pwd']);
+    $row = mysqli_fetch_assoc($result); //fetches d values in db with d connection
+    $UnharshPwd = password_verify($pwd, $row['pwd']); //this returns either 1 or 0; tre of false
     
     //lets check if d value of d user that is coming is less dan 1
     if ($resultCheck < 1 || $UnharshPwd != 1){
@@ -45,6 +46,7 @@ if(isset($_POST['submit'])){
 		echo "<p class='gmail'> Welcome You are loggedin as $email </p>";
         // header('Location: index.php');
         }*/
+        
 };
 ?>
 <!DOCTYPE html>
@@ -103,7 +105,7 @@ if(isset($_POST['submit'])){
 		<form action="login.php" method="POST">
 			<div>
 				<label for="email">User Email</label>
-				<input type="text" id="email" name="email">
+				<input type="text" id="email" name="email" placeholder="Your email">
 			</div>
 
 			<div>
@@ -113,6 +115,9 @@ if(isset($_POST['submit'])){
 
 			<input type="submit" value="Login" name="submit">
 		</form>
+
+        <!-- password reset -->
+        <h4>Password Reset?<i><a href="forgot_pwd.php">Click Here</a></i></h4>
 
 
 	</div>

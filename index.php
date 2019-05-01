@@ -27,14 +27,7 @@ if(isset($_POST['submit'])){
 
 }
 
-
-
-
-
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -63,7 +56,6 @@ if(isset($_POST['submit'])){
     <!-- <script src="main.js"></script> -->
     <link rel="stylesheet" href="css/style.css">
     <script src=""></script>
-    
     
 </head>
 
