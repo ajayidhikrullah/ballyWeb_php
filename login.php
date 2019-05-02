@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('db.php');
 if(isset($_POST['submit'])){
 	//lets get d values
@@ -35,7 +36,15 @@ if(isset($_POST['submit'])){
         echo '<p class="gmail">Email and password dont exist</p>';
     }*/ else /*($UnharshPwd == true)*/{
             // log d user in
-		echo "<p class='gmail'> Welcome You are loggedin as $email </p>";
+            //ADD SESSION HERE
+            //$row == this is holding d datas from database
+            $_SESSION['id'] = $row ['id'];
+            $_SESSION['f_name'] = $row['f_name'];
+            $_SESSION['l_name'] = $row['l_name'];
+            $_SESSION['email'] = $row['email'];
+            echo "<p class='gmail'> Welcome You are loggedin as $email </p>";
+            header('Location: index.php?login=Success');
+            exit();
         }
 	/*if(!$resultCheck = $result->fetch_assoc()){
         // $UnHarshPwd = password_verify($pwd, $resultCheck['pwd']);

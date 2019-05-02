@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 // ini_set("SMTP","ssl://smtp.gmail.com");
 // ini_set("SMTP","ssl://smtp.gmail.com");
 // ini_set("smtp_port","465"); 
@@ -116,7 +116,19 @@ $mail = $smtp->send();
 </head>
 
 <body>
-    <div class="container">
+    <div class="container"><?php
+            
+            // echo "<p class='gmail'> yh </p> ";
+            $show = $_SESSION['f_name'];
+            echo "<p class='gmail'> Welcome  $show </p>";
+
+
+
+            // if (isset($_SESSION['id'])){
+            // // echo "<p class='gmail'> Welcome You are loggedin as $id </p>";
+            // echo $_SESSION['$id'];
+            // }      
+            ?>
         <header class="header-container">
             <div class="header-logo"><a href="index.php"><img src="img/favicon/favicon.png" alt="Our Logo" style="width:50px; height:50px"><span class="logo-name">|[AJDHIK]|</span></a></div>
         </header>

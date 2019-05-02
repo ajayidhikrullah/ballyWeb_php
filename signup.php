@@ -1,4 +1,5 @@
 <?php
+session_start();
     // require('config.php');
     require('db.php');
 
@@ -71,7 +72,6 @@
     header('Loction: signup.php?internal error');
 }
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -105,6 +105,18 @@
 
 <body>
 <header>
+<?php            
+            // echo "<p class='gmail'> yh </p> ";
+            $show = $_SESSION['f_name'];
+            echo "<p class='gmail'> Welcome  $show </p>";
+
+
+
+            // if (isset($_SESSION['id'])){
+            // // echo "<p class='gmail'> Welcome You are loggedin as $id </p>";
+            // echo $_SESSION['$id'];
+            // }      
+            ?>
                 <div class="main-header">
                     LOGO
                 </div>

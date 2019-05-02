@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('db.php');
 //get d submit to click
 if(isset($_POST['submit'])){
@@ -62,6 +63,19 @@ if(isset($_POST['submit'])){
 <body>
     
         <header>
+        <?php
+            
+            // echo "<p class='gmail'> yh </p> ";
+            $show = $_SESSION['f_name'];
+            echo "<p class='gmail'> Welcome  $show </p>";
+
+
+
+            // if (isset($_SESSION['id'])){
+            // // echo "<p class='gmail'> Welcome You are loggedin as $id </p>";
+            // echo $_SESSION['$id'];
+            // }      
+            ?>
                 <div class="main-header">
                     LOGO
                 </div>
@@ -78,6 +92,8 @@ if(isset($_POST['submit'])){
                     </ul>
                 </nav>
             </header>
+            
+            
     <!-- <div class="container">
         <header class="header-container">
             <div class="header-logo"><a href="index.html"><img src="img/favicon/favicon.png" alt="Our Logo" style="width:50px; height:50px"><span class="logo-name">|[AJDHIK]|</span></a></div>
