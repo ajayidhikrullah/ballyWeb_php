@@ -59,7 +59,7 @@ setting the media query for minwidth (231px)
 header{
 	padding: 10px;
 	/*margin:10px;*/
-	background-color:#000;
+	background-color:rgb(161, 94, 17);
 	width: 100%;
 	position: fixed;
 	overflow: hidden;
@@ -711,4 +711,18 @@ input[type=submit]{
   border: 5px solid black;
   background-color: rgb(192, 148, 52);
   color: #fff;
+}
+
+/* //Logout Button */
+#logout{
+  text-decoration: none;
+  color: crimson;
+  border: 2px solid black;
+  font-size: 1.5em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* background-color: darkgoldenrod; */
+  padding: 5px;
+}
+#logout:hover{
+  background-color: rgb(149, 113, 66);
 }
