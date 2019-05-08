@@ -63,7 +63,16 @@ header{
 	width: 100%;
 	position: fixed;
 	overflow: hidden;
-	top: 0;
+  top: 0;
+
+
+}
+
+.full_section{
+  /* clear: both; */
+  /* position: relative; */
+  margin-top: 20%;
+  
 }
 
 .main-header{
@@ -88,11 +97,18 @@ header{
 }
 
 .main-nav .searchbar{
-	float: right;
+	float: left;
 	margin-left:10px;
   /*padding: 5px;*/
-  background-color: white;  
+  background-color: white;
 }
+
+.main-nav .searchbar:hover{
+  
+}
+
+
+
 
 .main-nav ul li{
   display: inline;
@@ -704,25 +720,70 @@ input[type=submit]{
 
 
 /* /////////////////////////////////////////// */
-/* welcome.php
+/* SUCCESS AND FAILURE MESSAGE IF USERS DONT EXIST
  */
-.gmail{
-  margin: 10% 10% 0 10%;
-  border: 5px solid black;
+.success{
+  width: 25%;
+  margin: 0% 10% 5px 10%;
+  border: 2px solid black;
   background-color: rgb(192, 148, 52);
   color: #fff;
+}
+
+.failed{
+  width: 50%;
+  margin: 10% 10% 0 10%;
+  border: 2px solid black;
+  background-color: rgb(192, 148, 52);
+  color: #fff;
+  box-shadow: 5px 10px 10px grey;
 }
 
 /* //Logout Button */
 #logout{
   text-decoration: none;
-  color: crimson;
+  color: rgb(216, 203, 206);
   border: 2px solid black;
   font-size: 1.5em;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /* background-color: darkgoldenrod; */
+  background-color: darkgoldenrod;
   padding: 5px;
+  float: right;
+  margin: 5px;
 }
 #logout:hover{
   background-color: rgb(149, 113, 66);
+}
+
+/* BLOG Style */
+iframe{
+  width: 500px;
+  height: 250px;
+  border: 1px solid green;
+  margin: 5% 10% 0 1.5%;
+
+}
+
+textarea{
+  width: 500px;
+  height: 100px;
+  /* background-color: antiquewhite; */
+  resize: none;
+  background-color: #fff;
+}
+
+/* COMMENT SESSION */
+.show-comment{
+  width: 485px;
+  padding: 5px;
+  background-color: burlywood;
+  color: cornsilk;
+  margin: 0 0 5px 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-display:  */
+  border-radius: 5px;
+}
+/* DATE */
+.ShowDate{
+  color: coral;
 }
