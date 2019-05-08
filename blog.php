@@ -3,7 +3,7 @@ session_start();
 include 'db.php';
 
 include 'comment.php';
-date_default_timezone_set('Africa/Nigeria');
+date_default_timezone_set('Nigeria');
 
 
 
@@ -48,10 +48,10 @@ date_default_timezone_set('Africa/Nigeria');
             $show = $_SESSION['f_name'];
             // echo "<p class='gmail'> Welcome  $show </p>";
             if (isset(/*$_SESSION['f_name']*/ $show )){
-            echo "<p class='gmail'> Welcome! You are loggedin as $show </p>";
+            echo "<p class='success'>Hi, $show </p>";
             // echo $_SESSION['$f_name'];
             }else{
-                echo 'you are not LoggedIN';
+                echo "<p class='failed'>you are not LoggedIN</p>";
             }
             ?>
                 <div class="main-header">
@@ -86,10 +86,11 @@ date_default_timezone_set('Africa/Nigeria');
     echo
         " <form method='POST' action='".setComments($conn)."'>
             <input type='hidden' name='u_name' value='anonymmous'>
-            <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'> <br> <br>
+            <input type='hidden' class='ShowDate' name='date' value='".date('Y-m-d H:i:s')."'> <br> <br>
             <textarea name='message' id='' cols='30' rows='10'></textarea> <br>
             <button type='submit' class='btn-signup' name='submitComment'>Comment</button>
-        </form>"
+        </form>";
+        getComments($conn);
     ?>
     </div>
 
@@ -117,7 +118,7 @@ date_default_timezone_set('Africa/Nigeria');
 
 
 
-
+<br>
 
 
 
