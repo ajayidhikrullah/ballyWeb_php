@@ -12,14 +12,14 @@ if(isset($_POST['submit'])){
 
     //use if...else to confirm if none is in db
     if(mysqli_num_rows($conn_sql) > 0){
-    echo '<p class="gmail"> User already exists</p>';
+    echo '<p class="failed"> User already exists</p>';
     // header('Location: index.php?message=Email Already Exist');
     }
     // then if not exist or not greater dan 0 above; then INSERT
     else{                        //db_table; db_column; ===== 'this is d evans '
         $ins_email = "INSERT INTO newsletters (user_email) VALUES ('$email')";
         $conn_sql = mysqli_query($conn, $ins_email);
-        echo '<p class="gmail">Thank You, you have successfully subscribed to our NewsLetter and it has been recorded.</p>';
+        echo '<p class="success">Thank You, you have successfully subscribed to our NewsLetter and it has been recorded.</p>';
         // exit;
 
     }
@@ -63,18 +63,16 @@ if(isset($_POST['submit'])){
 <body>
     
         <header>
-        <?php
-            
+        <?php       
             // echo "<p class='gmail'> yh </p> ";
             $show = $_SESSION['f_name'];
-            echo "<p class='gmail'> Welcome  $show </p>";
-
-
-
-            // if (isset($_SESSION['id'])){
-            // // echo "<p class='gmail'> Welcome You are loggedin as $id </p>";
-            // echo $_SESSION['$id'];
-            // }      
+            // echo "<p class='gmail'> Welcome  $show </p>";
+            if (isset($show)){
+            echo "<p class='success'> Hi, $show </p>";
+            // echo $_SESSION['$f_name'];
+            }else{
+                echo "<p class='failed'>you are logged OUT</p>";
+            } 
             ?>
                 <div class="main-header">
                     LOGO
@@ -86,13 +84,22 @@ if(isset($_POST['submit'])){
                         <li><a href="./contact.php">Contact</a></li>
     <!--JUST ADDED NEW HEADER--><li><a href="#">About</a></li>
                         <li><a href="./signup.php">Sign Up</a></li>
-                        <div class="searchbar">
-                            <button type="submit"><i class="fa fa-search fa-5x"></i></button>
-                        </div>
+                        <li><a href="blog.php">Blog</a></li>
+                        
                     </ul>
+                    <form action="logout.php">
+                            <button id="logout">Log Out</button>
+                        </form>
+
+                        <div class="searchbar">
+                            <input type="text" name="search">
+                            <button id="logout" type="submit"><i class="fa fa-search fa-5x"></i></button>
+                        </div>
                 </nav>
             </header>
-            
+
+
+            <div class="clear"></div>
             
     <!-- <div class="container">
         <header class="header-container">
@@ -107,7 +114,7 @@ if(isset($_POST['submit'])){
                 <li><a href="signup.html">Sign Up</a></li>
             </ul>
         </nav> -->
-
+<div class="full_section">
         <section class="sect">
             <main class="banner-sect">
                 <h3 class="banner-head">WELCOME TO <span class="banner-head-name"> HAMZARTS </span>FASHION HOME</h3>
@@ -193,7 +200,7 @@ if(isset($_POST['submit'])){
                     </div>
 -->
 <?php
-'<p class="gmail">User Mail Already Exist</p>';
+'<p class="failed">User Mail Already Exist</p>';
 
 ?>
 
@@ -232,6 +239,6 @@ if(isset($_POST['submit'])){
             </div>
         </footer>
         <script src="js/script.js"></script>
-  
+</div>  
 </body>
 </html>
