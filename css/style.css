@@ -770,6 +770,7 @@ textarea{
   /* background-color: antiquewhite; */
   resize: none;
   background-color: #fff;
+  padding: 5px;
 }
 
 /* COMMENT SESSION */
@@ -782,8 +783,52 @@ textarea{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   /* font-display:  */
   border-radius: 5px;
+  position: relative;
 }
 /* DATE */
 .ShowDate{
   color: coral;
+}
+
+/* EDIT BUTTON */
+.editBtn{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.editBtn button{
+ width: 40px;
+ color: #282828;
+ background-color: #fff;
+ opacity: 0.8;
+ padding: 2px;
+}
+
+.editBtn button:hover{
+  opacity: 1;
+  border: 2px solid black;
+
+}
+
+/* //delete button */
+/* EDIT BUTTON */
+.deleteBtn{
+  position: absolute;
+  top: 0;
+  right:  50px;
+}
+
+.deleteBtn button{
+ width: 70px;
+ color: #282828;
+ background-color: #fff;
+ opacity: 0.8;
+ padding: 2px;
+}
+
+.deleteBtn button:hover{
+  opacity: 1;
+  border: 2px solid black;
+
 }
